@@ -92,7 +92,7 @@ float : left;
 width : 16px;
 height : 16px;
 padding : 0;
-background : transparent url(../img/a-rss.png) no-repeat 0 0;
+background : transparent image-url('a-rss.png') no-repeat 0 0;
 @include hide-text; }
 
 // TYPOGRAPHY ====================================================
