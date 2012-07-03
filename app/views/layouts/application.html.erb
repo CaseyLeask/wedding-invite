@@ -46,7 +46,9 @@
   <li<%=' class="active"' if current_page?(:controller => controller, :action => action)%>><%= link_to_unless_current controller.to_s.humanize, {:action => action} %></li>
 <% end -%></ul>
 
+<div id='main'>
 <%= yield %>
+</div>
 
 <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 <%= javascript_include_tag "application" %>
