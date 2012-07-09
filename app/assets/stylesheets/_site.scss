@@ -12,7 +12,7 @@
 // 1. ROOT 					==============================
 
 html {
-background : $bodycolor;
+background : $bodycolor image-url('bg.jpg');
 font-size : 62.5%;
 -webkit-overflow-scrolling : touch;
 -webkit-tap-highlight-color : lighten($basecolor, 75%);

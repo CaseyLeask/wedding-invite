@@ -1,4 +1,7 @@
 WeddingInvite::Application.routes.draw do
+  match 'rsvp' => 'rsvp#details', :as => :rsvp
+  match 'ceremony_and_reception' => 'ceremony_and_reception#info', :as => :ceremony_and_reception
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

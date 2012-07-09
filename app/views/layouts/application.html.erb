@@ -42,11 +42,12 @@
      chromium.org/developers/how-tos/chrome-frame-getting-started -->
 <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-<ul id='header'><% {:home => :index}.each do |controller, action| -%>
-  <li<%=' class="active"' if current_page?(:controller => controller, :action => action)%>><%= link_to_unless_current controller.to_s.humanize, {:action => action} %></li>
-<% end -%></ul>
-
 <div id='main'>
+  <ul id='header'>
+    <li<%=' class="active"' if current_page?(:controller => :home, :action => :index)%>><%= link_to_unless_current 'Home', {:controller => :home, :action => :index} %></li>
+    <li<%=' class="active"' if current_page?(:controller => :ceremony_and_reception, :action => :info)%>><%= link_to_unless_current 'Ceremony And Reception', ceremony_and_reception_path %></li>
+    <li<%=' class="active"' if current_page?(:controller => :rsvp, :action => :details)%>><%= link_to_unless_current 'RSVP', rsvp_path %></li>
+  </ul>
 <%= yield %>
 </div>
 

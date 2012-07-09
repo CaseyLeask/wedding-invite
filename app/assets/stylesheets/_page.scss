@@ -7,8 +7,18 @@
 
 // ==========================================================
 
-#main {
+#header > ul, #main {
   width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 10px auto;
+}
+#header {
+  list-style: none;
+  padding: 20px 20px 20px;
+}
+#main {
+  padding: 0 20px 20px;
+  //@include striped-background(#932e44);
+  background: #932e44 image-url('bg.png') repeat;
+  @include rounded(5px);
+  color: $white;
 }

@@ -20,7 +20,7 @@ $white 			: rgb(255,255,255);
 
 // 1. ROOT 					==============================
 
-$bodycolor : #392B28;
+$bodycolor : #93737a;
 $textcolor : black;
 
 // 2. TYPOGRAPHY 			==============================
@@ -45,9 +45,9 @@ $bordercolor    : lighten($basecolor, 60%);
 
 // Links
 
-$linkcolor 		    : rgb(1,53,104);
+$linkcolor 		    : #fff;
 $linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited   : darken($linkcolorhover, 10);
+$linkcolorvisited : $linkcolor;
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 
 // colour palettes
