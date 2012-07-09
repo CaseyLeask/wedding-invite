@@ -1,4 +1,6 @@
 WeddingInvite::Application.routes.draw do
+  get "gifts/info"
+
   match 'rsvp' => 'rsvp#details', :as => :rsvp
   match 'ceremony_and_reception' => 'ceremony_and_reception#info', :as => :ceremony_and_reception
 
