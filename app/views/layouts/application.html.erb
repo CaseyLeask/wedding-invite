@@ -48,6 +48,7 @@
     <li<%=' class="active"' if current_page?(ceremony_and_reception_path)%>><%= link_to_unless_current 'Ceremony And Reception', ceremony_and_reception_path %></li>
     <li<%=' class="active"' if current_page?(rsvp_path)%>><%= link_to_unless_current 'RSVP', rsvp_path %></li>
     <li<%=' class="active"' if current_page?(gifts_path)%>><%= link_to_unless_current 'Gifts', gifts_path %></li>
+    <li<%=' class="active"' if current_page?(out_of_towners_path)%>><%= link_to_unless_current 'Out Of Towners', out_of_towners_path %></li>
   </ul>
 <%= yield %>
 </div>
