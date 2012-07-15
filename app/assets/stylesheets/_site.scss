@@ -10,6 +10,9 @@
 /* Page =================================================== */
 
 // 1. ROOT 					==============================
+* {
+@include box-sizing();
+}
 
 html {
 background : $bodycolor image-url('bg.jpg');
