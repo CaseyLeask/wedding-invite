@@ -42,8 +42,31 @@
 #header > ul.open {
   height: 105px;
 }
+
 #main #home ul {
+  padding: 0;
   list-style: none;
+}
+#slideshow { 
+  position: relative; 
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 450px;
+  @include box-shadow(0 0 20px rgba(0,0,0,0.4)); 
+  overflow: hidden;
+}
+#slideshow > img { 
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: inherit;
+}
+#slideshow img:first-child {
+  position: relative;
+  display: block;
+  float: left;
 }
 #main #home h1 {
   text-align: center;
