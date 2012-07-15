@@ -44,6 +44,7 @@
 
 <div id='main'>
   <div id='header'>
+    <h1><%=@title %></h1>
     <ul>
       <li<%=' class="active"' if current_page?(home_path)%>><%= link_to_unless_current 'Home', home_path %></li>
       <li<%=' class="active"' if current_page?(ceremony_and_reception_path)%>><%= link_to_unless_current 'Ceremony And Reception', ceremony_and_reception_path %></li>
