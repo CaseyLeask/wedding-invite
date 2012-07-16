@@ -43,8 +43,15 @@
   overflow: hidden;
   @include transition(height 0.35s ease);
 }
+#header > ul li {
+  padding: 5px 20px;
+}
+#header ul li.active {
+  @include background-alpha($black, 0.2);
+  @include rounded(8px);
+}
 #header > ul.open {
-  height: 115px;
+  height: 165px;
 }
 
 #main #home ul {

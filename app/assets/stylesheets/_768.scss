@@ -18,6 +18,20 @@
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
+#header h1 {
+  display: none;
+}
+#header .navigation {
+  display: none;
+}
+#header > ul, #header > ul.open {
+  height: 31px;
+  padding-top: 0;
+}
+#header ul li {
+  float: left;
+  width: auto;
+}
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================
