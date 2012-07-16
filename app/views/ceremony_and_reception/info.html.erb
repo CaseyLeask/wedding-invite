@@ -46,3 +46,11 @@
     });
   }
 </script>
+<% content_for :footer do %>
+<script>
+  $(document).ready(function() {
+    initialize();
+    calcRoute();
+  });
+</script>
+<% end %>

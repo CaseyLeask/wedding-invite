@@ -30,7 +30,7 @@
   border: $buttonborderwidth $buttonborderstyle $buttonbordercolor {
     bottom-color: $buttonbottombordercolor;
   }
-  @include border-radius(4px);
+  @include rounded(4px);
   cursor: pointer;
   *margin-left: .3em;
 
