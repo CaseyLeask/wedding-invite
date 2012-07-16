@@ -1,2 +1,48 @@
-<h1>Taxi fare from the city to the venue should cost around $30</h1>
-<h1>The ceremony will begin at 6pm. Gates will be closed once the ceremony starts, so please try to be on time.</h1>
+<% content_for :head do %>
+  <script type="text/javascript"
+    src="//maps.googleapis.com/maps/api/js?key=AIzaSyAvk_AVHXilZ8LOQ0XxbShiK3KmuDnMFBw&sensor=false">
+  </script>
+<% end %>
+<div id='ceremony-and-reception'>
+  <h1>Please join us from (need to confirm time) in the garden outside The International's Georgian Room, with reception to follow.</h1>
+  <div id='map_canvas' style='width: 100%; height: 400px;'></div>
+  <h1>The International, 81 Bay St., Brighton, Victoria, 3186</h1>
+  <h1>Taxi fare from the city to the venue should cost around $30</h1>
+  <h1>The ceremony will begin at 6pm. Gates will be closed once the ceremony starts, so please try to be on time.</h1>
+</div>
+
+<script type="text/javascript">
+  var directionDisplay;
+  var directionsService = new google.maps.DirectionsService();
+  var map;
+  var international = 'The International, 81 Bay St., Brighton, Victoria, 3186';
+  var station = 'Southern Cross Station Docklands VIC 3008'
+
+  function initialize() {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var myOptions = {
+      zoom: 14,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: new google.maps.LatLng(-37.90398, 144.99462)
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    directionsDisplay.setMap(map);
+  }
+
+  function calcRoute() {
+    var selectedMode = 'DRIVING'
+    var request = {
+        origin: station ,
+        destination: international,
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: google.maps.TravelMode[selectedMode]
+    };
+    directionsService.route(request, function(response, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+      }
+    });
+  }
+</script>

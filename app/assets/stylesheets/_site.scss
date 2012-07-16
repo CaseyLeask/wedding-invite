@@ -37,6 +37,13 @@ color : $textcolor; }
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
+#map_canvas * {
+  @include box-sizing(content-box);
+  color: $black 
+}
+#map_canvas img {
+  max-width: none;
+}
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================

@@ -36,6 +36,7 @@
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <%= javascript_include_tag "modernizr" %>
   <%= csrf_meta_tags %>
+  <%= yield :head if content_for?(:head) -%>
 </head>
 <body>
 <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
@@ -59,6 +60,5 @@
 
 <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 <%= javascript_include_tag "application" %>
-
 </body>
 </html>
