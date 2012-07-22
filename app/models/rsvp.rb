@@ -1,3 +1,3 @@
 class Rsvp < ActiveRecord::Base
-  attr_accessible :address, :email, :name, :number
+  attr_accessible :address, :email, :name, :number, :status
 end

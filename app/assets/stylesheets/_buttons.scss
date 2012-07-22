@@ -49,7 +49,8 @@ input[type="submit"].btn:hover { }
   @include box-shadow(inset 0 1px 0 0 #e4a83a);
   text-shadow: 0 1px 0 #8A5B05;
   &:active,
-  &:focus {
+  &:focus,
+  &.selected {
     -moz-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
     -webkit-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
     -o-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
@@ -69,7 +70,8 @@ input[type="submit"].btn:hover { }
   @include box-shadow(inset 0 1px 0 0 #c41717);
   text-shadow: 0 1px 0 #4B0202;
   &:active,
-  &:focus {
+  &:focus,
+  &.selected {
     -moz-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
     -webkit-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
     -o-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
@@ -88,7 +90,8 @@ input[type="submit"].btn:hover { }
   @include box-shadow(inset 0 1px 0 0 #568a2e);
   text-shadow: 0 1px 0 #1E3909;
   &:active,
-  &:focus {
+  &:focus,
+  &.selected {
     -webkit-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
     -moz-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
     -o-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;

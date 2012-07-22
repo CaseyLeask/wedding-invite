@@ -1,0 +1,12 @@
+  <%= form_for(@rsvp, :url => send_rsvp_path(@rsvp), :html => {:class => 'form_horizontal hidden'}) do |f| %>
+    <%= f.hidden_field :status %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => 'required' %>
+    <%= f.label :number %>
+    <%= f.text_field :number, :required => 'required' %>
+    <%= f.label :email %>
+    <%= f.text_field :email, :required => 'required' %>
+    <%= f.label :address, 'Postal Address' %>
+    <%= f.text_area :address, :required => 'required', :rows => 6 %>
+    <%= f.submit 'Send', class: "btn btn-large btn-primary" %>
+  <% end %>

@@ -1,0 +1,12 @@
+<h1>RSVP Details</h1>
+<ul>
+  <% Rsvp.all.each do |rsvp| %>
+  <li>
+  <p>Name: <%= rsvp.name %></p>
+  <p>Number: <%= rsvp.number %></p>
+  <p>Email: <%= rsvp.email %></p>
+  <p>Address: <%= rsvp.address %></p>
+  <p>RSVP Status: <%= rsvp.status %></p>
+  </li>
+  <% end %>
+</ul>
