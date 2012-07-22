@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta charset="utf-8">
   </head>
   <body>
-    <h1>Welcome to example.com</h1>
-    <p>
-      You have successfully signed up to example.com
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+    <h1>RSVP from <%= @rsvp.name -%></h1>
+    <p>Number: <%= @rsvp.number -%></p>
+    <p>Email: <%= @rsvp.email -%></p>
+    <p>Address: <%= @rsvp.address -%></p>
+    <p>Status: <%= @rsvp.status -%></p>
   </body>
 </html>

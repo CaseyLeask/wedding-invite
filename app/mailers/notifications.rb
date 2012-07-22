@@ -6,10 +6,11 @@ class Notifications < ActionMailer::Base
   #
   #   en.notifications.notify_rsvp.subject
   #
-  def notify_rsvp
+  def notify_rsvp(rsvp)
+    @rsvp = rsvp
     @greeting = "Hi"
 
     mail :to => "caseyleask@gmail.com",
-         :subject => 'Test email from yourself'
+         :subject => "RSVP from #{@rsvp.name}"
   end
 end
