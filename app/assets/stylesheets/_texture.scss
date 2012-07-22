@@ -153,19 +153,19 @@
 
 // GRADIENTS ====================================================
 
-@mixin basegrad { @include vertical($basecolor, darken($basecolor, 10%)); }
+@mixin basegrad { @include vertical(#08C, #05C); }
 
 @mixin errorgrad { @include vertical($basecolor, darken($errorcolor, 10%)); }
 
 @mixin greygrad { @include vertical($white, darken($lightergrey, 5%)); }
 
-@mixin infograd { @include vertical($infocolor, darken($infocolor, 10%)); }
+@mixin infograd { @include vertical(#F28238, #EA5A30); }
 
 @mixin inversegrad { @include vertical($inverscolor, darken($inverscolor, 10%)); }
 
 @mixin successgrad { @include vertical($successcolor, darken($successcolor, 10%)); }
 
-@mixin warninggrad { @include vertical($warningcolor, darken($warningcolor, 10%)); }
+@mixin warninggrad { @include vertical(#F28238, #EA5A30); }
 
 // For additional gradients see: https://github.com/twitter/bootstrap/blob/master/less/mixins
 

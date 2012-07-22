@@ -22,28 +22,83 @@
   }
   @include font-size(12);
   line-height: $baselineheight;
-  color: $buttoncolor;
+  color: $white;
   text-align: center;
   vertical-align: middle;
   background-color: $buttonbackground;
   @include greygrad;
-  border: $buttonborderwidth $buttonborderstyle $buttonbordercolor {
-    bottom-color: $buttonbottombordercolor;
-  }
   @include rounded(5px);
   cursor: pointer;
   *margin-left: .3em;
+  border: none;
 
   &:visited,
   &:hover {
-    color: $buttoncolor;
+    color: $white;
     text-decoration: none;
   }
 }
 
-input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
+input[type="submit"].btn:hover { }
 
 .btn:first-child { *margin-left: 0; }
+
+.btn.btn-orange {
+  border: 1px solid #AC740C;
+  @include vertical(#D1911A, #A7710C);
+  @include box-shadow(inset 0 1px 0 0 #e4a83a);
+  text-shadow: 0 1px 0 #8A5B05;
+  &:active,
+  &:focus {
+    -moz-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
+    -webkit-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
+    -o-box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #895d0b, inset 0 0 8px 4px #895d0b, 0 1px 1px 0 #eeeeee;
+    border: 1px solid #99670B;
+  }
+  &:hover {
+    @include vertical(#98670B, #B6801B);
+    @include box-shadow(inset 0 1px 0 0 #db9d29);
+  }
+}
+
+
+.btn.btn-darkred {
+  border: 1px solid #6F0606;
+  @include vertical(#981010, #6B0606);
+  @include box-shadow(inset 0 1px 0 0 #c41717);
+  text-shadow: 0 1px 0 #4B0202;
+  &:active,
+  &:focus {
+    -moz-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
+    -webkit-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
+    -o-box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #4d0505, inset 0 0 8px 4px #4d0505, 0 1px 1px 0 #eeeeee;
+    border: 1px solid #5C0505;
+  }
+  &:hover {
+    @include vertical(#5C0505, #7E1010);
+    @include box-shadow(inset 0 1px 0 0 #a91919);
+  }
+}
+
+.btn.btn-darkgreen {
+  border: 1px solid #315912;
+  @include vertical(#497C22, #2F5511);
+  @include box-shadow(inset 0 1px 0 0 #568a2e);
+  text-shadow: 0 1px 0 #1E3909;
+  &:active,
+  &:focus {
+    -webkit-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
+    -moz-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
+    -o-box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #213b0d, inset 0 0 8px 4px #213b0d, 0 1px 1px 0 #eeeeee;
+  }
+  &:hover {
+    @include vertical(#28480F, #3E651F);
+    @include box-shadow(inset 0 1px 0 0 #568a2e);
+  }
+}
 
 // disabled
 
@@ -54,10 +109,6 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-error {
   @include errorgrad;
-  border: {
-    color: darken($errorcolor, 15%);
-    bottom-color: darken($errorcolor, 20%);
-  }
   color: $white;
 
   &:visited,
@@ -68,10 +119,6 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-info {
   @include infograd;
-  border: {
-    color: darken($infocolor, 15%);
-    bottom-color: darken($infocolor, 20%);
-  }
   color: darken($infocolor, 50%);
 
   &:visited,
@@ -82,10 +129,6 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-inverse {
   @include inversegrad;
-  border: {
-    color: darken($inverscolor, 15%);
-    bottom-color: darken($inverscolor, 20%);
-  }
   color: $white;
 
   &:visited,
@@ -96,11 +139,6 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-primary {
   @include basegrad;
-  border: {
-    color: darken($basecolor, 15%);
-    bottom-color: darken($basecolor, 20%);
-  }
-  color: $white;
 
   &:visited,
   &:hover { color: $white; }
@@ -110,29 +148,21 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-success {
   @include successgrad;
-  border: {
-    color: darken($successcolor, 15%);
-    bottom-color: darken($successcolor, 20%);
-  }
 }
 
 // warning
 
 .btn-warning {
   @include warninggrad;
-  border: {
-    color: darken($warningcolor, 15%);
-    bottom-color: darken($warningcolor, 20%);
-  }
 }
 
 // sizes
 
 .btn-extlarge {
   padding: 0 20px;
-  @include font-size(21);
+  @include font-size(24);
   line-height: 38px;
-  @include rounded(5px);
+  @include rounded(6px);
 }
 
 .btn.btn-large {
@@ -144,9 +174,9 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 
 .btn-large {
   padding: 0 20px;
-  @include font-size(14);
+  @include font-size(19);
   line-height: 38px;
-  @include rounded(5px);
+  @include rounded(6px);
 }
 
 .btn-small {
@@ -162,6 +192,8 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 }
 
 .btn-group {
+  float: left;
+  width: 100%;
   position: relative;
   *zoom: 1;
   *margin-left: .3em;
@@ -170,23 +202,13 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
   .btn {
     position: relative;
     float: left;
-    margin-left: -1px;
-    @include border-radius(0);
+    margin-right: 10px;
 
     &:first-child {
-      margin-left: 0;
-      @include border-radius(2px, 0, 2px, 0);
     }
 
-    &:last-child { @include border-radius(0, 2px, 0, 2px); }
-
-    &.large {
-      &:first-child {
-        margin-left: 0;
-        @include border-radius(4px, 0, 4px, 0);
-      }
-
-      &:last-child { @include border-radius(0, 4px, 0, 4px); }
+    &:last-child { 
+      margin-right: 0;
     }
   }
 }
