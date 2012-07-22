@@ -14,7 +14,7 @@
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1;
-  padding: 6px 11px 6px;
+  padding: 0 20px;
   margin-bottom: 0;
   font: {
     weight: bold;
@@ -30,7 +30,7 @@
   border: $buttonborderwidth $buttonborderstyle $buttonbordercolor {
     bottom-color: $buttonbottombordercolor;
   }
-  @include rounded(4px);
+  @include rounded(5px);
   cursor: pointer;
   *margin-left: .3em;
 
@@ -129,9 +129,10 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 // sizes
 
 .btn-extlarge {
-  padding: 11px 22px;
+  padding: 0 20px;
   @include font-size(21);
-  @include border-radius(4px);
+  line-height: 38px;
+  @include rounded(5px);
 }
 
 .btn.btn-large {
@@ -142,20 +143,20 @@ input[type="submit"].btn:hover { border-color: $buttonbordercolor; }
 }
 
 .btn-large {
-  padding: 11px 22px;
+  padding: 0 20px;
   @include font-size(14);
-  line-height: normal;
-  @include border-radius(4px);
+  line-height: 38px;
+  @include rounded(5px);
 }
 
 .btn-small {
-  padding: 6px 10px;
+  padding: 0 10px;
   @include font-size(11);
   line-height: 16px;
 }
 
 .btn-mini {
-  padding: 3px 5px;
+  padding: 0 5px;
   @include font-size(11);
   line-height: 14px;
 }
