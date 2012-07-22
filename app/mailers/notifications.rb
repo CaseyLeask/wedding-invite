@@ -1,5 +1,5 @@
 class Notifications < ActionMailer::Base
-  default from: "caseyleask@gmail.com"
+  default :from => "caseyleask@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -9,6 +9,7 @@ class Notifications < ActionMailer::Base
   def notify_rsvp
     @greeting = "Hi"
 
-    mail to: "caseyleask@gmail.com"
+    mail :to => "caseyleask@gmail.com",
+         :subject => 'Test email from yourself'
   end
 end

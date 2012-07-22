@@ -11,6 +11,7 @@ class RsvpController < ApplicationController
                      :address => params[:rsvp][:address],
                      :status => params[:rsvp][:status])
     if @rsvp.save 
+      Notifications.notify_rsvp.deliver
     else
     end
   end
