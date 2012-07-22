@@ -2,6 +2,7 @@ WeddingInvite::Application.routes.draw do
   match 'out_of_towners' => 'out_of_towners#info', :as => :out_of_towners
   match 'gifts' => 'gifts#info', :as => :gifts
   match 'rsvp' => 'rsvp#details', :as => :rsvp
+  match 'rsvp/send' => 'rsvp#send', :as => :send_rsvp
   match 'ceremony_and_reception' => 'ceremony_and_reception#info', :as => :ceremony_and_reception
 
   # The priority is based upon order of creation:

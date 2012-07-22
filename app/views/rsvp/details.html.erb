@@ -1,9 +1,25 @@
 <div id='rsvp'>
   <h1>Please let us know if you are available to join us on Saturday, January 12th, 2013.</h1>
   <div class='btn-group'>
-    <a class='btn btn-large btn-darkgreen'>Yes</a>
-    <a class='btn btn-large btn-darkred'>No</a>
-    <a class='btn btn-large btn-orange'>Need to Confirm</a>
+    <a id='yes' href='#yes' class='btn btn-large btn-darkgreen'>Yes</a>
+    <a id='no' href='#no' class='btn btn-large btn-darkred'>No</a>
+    <a id='to-confirm' href='#to-confirm' class='btn btn-large btn-orange'>Need to Confirm</a>
   </div>
-  <p>{If 'Yes' is clicked, link to another page requesting contact details -> Name, Phone number, Email, Postal Address}</p>
+  <%= form_for(@rsvp, :url => send_rsvp_path(@rsvp), :html => {:class => 'form_horizontal hidden'}) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => 'required' %>
+    <%= f.label :number %>
+    <%= f.text_field :number, :required => 'required' %>
+    <%= f.label :email %>
+    <%= f.text_field :email, :required => 'required' %>
+    <%= f.label :address, 'Postal Address' %>
+    <%= f.text_area :address, :required => 'required' %>
+    <%= f.submit 'Send', class: "btn btn-large btn-primary" %>
+  <% end %>
 </div>
+<% content_for :footer do %>
+<script>
+  $(document).ready(function() {
+  });
+</script>
+<% end %>
