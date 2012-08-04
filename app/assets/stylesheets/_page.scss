@@ -53,6 +53,11 @@
 }
 #header > ul li {
   padding: 5px 20px;
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: 24px;
+}
+#header > ul li a {
+  color: #FF3A42;
 }
 #header ul li.active {
   @include background-alpha($black, 0.2);
