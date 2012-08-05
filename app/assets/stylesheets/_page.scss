@@ -1,7 +1,7 @@
 // ==========================================================
 
 // 320 and Up by Andy Clarke
-// Version: 3.0
+// Version: 2.0
 // URL: http://stuffandnonsense.co.uk/projects/320andup/
 // Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 
@@ -26,10 +26,12 @@
 }
 #header {
   position: relative;
-  width: 100%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   min-height: 22px;
-  padding: 0;
-  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #f56a63;
   margin-bottom: 20px;
 }
 #header > h1 {
@@ -39,7 +41,7 @@
 }
 #header .navigation {
   position: absolute;
-  top: 18px;
+  top: 10px;
   right: 0;
   font-size: 32px;
 }
@@ -57,11 +59,12 @@
   font-size: 24px;
 }
 #header > ul li a {
-  color: #FF3A42;
+  color: #FFB5B8;
 }
 #header ul li.active {
   @include background-alpha($black, 0.2);
   @include rounded(8px);
+  color: #ffb41a;
 }
 #header > ul.open {
   height: 165px;
@@ -93,13 +96,14 @@
   float: left;
 }
 #main > h1 {
-  text-align: center;
-  font-size: 100px;
-  font-family: 'Great Vibes', cursive;
-  font-weight: 400;
   margin-bottom: 0;
   padding-top: 40px;
   padding-bottom: 20px;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: #ffebe0;
 }
 #main #home h2 {
   text-align: center;
